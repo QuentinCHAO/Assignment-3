@@ -1,0 +1,176 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{Substrate Integrated Folded Waveguides\\ (SIFW) and Filters}
+
+\author{Nikolaos Grigoropoulos, Benito Sanz-Izquierdo, and Paul R. Young,~\IEEEmembership{Senior Member,~IEEE,}
+        % <-this % stops a space
+\thanks{Manuscript received April 27, 2005; revised August 16, 2005. This work was supported by the EPSRC. The review of this letter was arranged by Associate Editor A. Weisshaar.}% <-this % stops a space
+\thanks{The authors are with the Department of Electronics, University of Kent, Kent CT2 7NT, U.K. (e-mail: p.r.young@kent.ac.uk).}}
+
+% The paper headers
+\markboth{IEEE MICROWAVE AND WIRELESS COMPONENTS LETTERS, VOL. 15, NO. 12, DECEMBER 2005}%
+{Shell \MakeLowercase{\textit{et al.}}: A Sample Article Using IEEEtran.cls for IEEE Journals}
+
+\IEEEpubid{1531-1309\$20.00~\copyright~2005 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\begin{abstract}
+A substrate integrated folded waveguide (SIFW), integrated transition to shielded stripline and a SIFW filter are demonstrated and shown to be in good agreement with X band measurements. Both the filter and waveguide are considerably smaller than their unfolded counterparts. Furthermore, the filter response is defined purely in terms of a photolithographically etched plane. 
+\end{abstract}
+
+\begin{IEEEkeywords}
+Filters, folded waveguide, substrate integrated waveguide (SIW).
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{R}{ECTANGULAR} waveguides (RWG) have been used for many years as a means of low loss propagation of electromagnetic waves. However, due to the three-dimensional (3-D) nature of RWGs, they can be difficult to manufacture accurately and integrate with planar circuitry, which is essential for complete systems.\\
+\indent In recent years several techniques have been proposed for the manufacture of RWGs using conventional microwave circuit fabrication techniques. These have included low temperature co-fired ceramics (LTCC) [1], microwave laminates [2], [3], and photoimageable thick-films [4]. Since these guides are formed from the substrate material they are referred to as substrate integrated waveguides (SIW). Substrate integrated waveguides have clear advantages over RWGs including low cost, simple integration with planar devices, and a size reduction of a factor . Unfortunately, even with this size reduction they can still be large when compared to their microstrip counterparts.\\
+\indent In [5] and [6], we proposed a substrate integrated waveguide based on the T-septum waveguide [7], [8]. These types of guides reduce the waveguide width by a factor of ${(4\epsilon_{r})^{-1/2}}$ while maintaining the same propagation characteristics as conventional RWGs. However, they can be difficult to manufacture using laminates and LTCC since they require an internal via to form the central septum. In this letter, we propose a substrate integrated folded waveguide (SIFW) based on the concept of the folded waveguide [9] and show that by using a dual-layer substrate the waveguide width can be reduced by up to ${(9\epsilon_{r})^{-1/2}}$. These types of guides are simpler to fabricate than the guides in [5] since they do not require internal vias. To demonstrate the feasibility of the SIFW we 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{1.png}
+\caption{Cross-sectional view of SIFW showing fundamental TE$_{10}$ type mode.}
+\label{fig_1}
+\end{figure}
+show a SIFW filter. The filter is significantly smaller than its unfolded counterpart and, more importantly, its operation is defined purely by the metalization on a planar layer which can be defined very accurately using photolithography.\\
+\section{Principle of Operation}
+Fig. 1 shows the structure of the SIFW and its fundamental mode. The mode resembles the TE$_{10}$ mode of conventional waveguide but folded round under itself. The maximum field is present at the edge of the guide between the middle conductor and the sidewall. For the correct choice of $a$, $b$ and $w$ the folded guide can be made to have the identical propagation characteristics to that of a RWG of width 2 $a$. As long as $w$ is chosen carefully, the bandwidth of the folded guide is the same as RWG.\\
+\indent As with RWG, the propagation constant is predominantly related to the value of $a$ and $\epsilon_{r}$ but unlike conventional guides the value of $b$ and $w$ also affect the propagation characteristics. Fortunately, due to the closed nature of the SIFWs, we find that the propagation constant is of exactly the same form as RWG if we introduce an effective width: $a_{eff}$. The propagation constant is then given by\\
+\begin{equation}
+\label{deqn_ex1a}
+\beta = \sqrt{\epsilon_{r}k_{0}^{2}-(\pi/{a_{eff})^{2}}}
+\end{equation}
+where $a_{eff}$ is a function of $a$, $b$ and $w$ but is constant with frequency. By simulating $\beta$ using the finite element method for a range of frequencies, $a_{eff}$ can be determined by fitting equation 1 to the simulated results using the least squares technique. By carrying out this process for a range of $b/a$ and $w/a$ ratios, the values of relative width $a/a_{eff}$ in Fig. 2 are obtained. Fig. 2 shows the relative reduction in width of the folded structure. We notice that for 2 {$w/a \approx b/a$} the width is reduced to 0.5 of that of a conventional SIW and under these conditions the propagation constant is identical to that of a SIW guide of width 2$a$. We notice that for {$b/a = 0.4$} and {$w/a = 0.05$} that the SIFW is just one-third of that of its SIW counterpart. Note that the bandwidth of the guide becomes\\
+\newpage
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{2.png}
+\caption{Relative width $a/a_{eff}$ of SIFW.}
+\label{fig_2}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{3.png}
+\caption{Comparison of losses in SIW and SIFW of identical cross-sectional area.}
+\label{fig_3}
+\end{figure}
+\noindent less than that of SIW if  2{$w/a > b/a$}.\\
+\indent Inevitably, the cost of decreased width is increased losses as the ratio $w/a$ becomes small. Fig. 3 shows the losses for a SIW and SIFW with solid walls. For the SIW the waveguide width is 15.5 mm and the height is 1.515 mm. The substrate has $\epsilon_{r}$ = 2.2 and tan $\delta = 0.0009$. The top, bottom, and sidewall metalizations are copper. The SIFW is identical except it has half the width and double the height. The cross-sectional area therefore remains the same. Setting $w $ = 0.9 mm results in the SIW and SIFW having almost identical phase constant but as can be seen the SIFW has slightly greater losses, but not significantly.
+\section{Filter Design}
+A common type of waveguide filter is the direct coupled cavity filter where inductive discontinuities are introduced into the guide to form $\lambda_{g}$/2 cavities. The discontinuities are conventionally formed using inductive irises; these are not compatible with SIW fabrication. Compatible structures have been used to form equivalent reactances and these include H plane offsets [10] and displaced inductive posts [11]. However, in both cases holes or trenches are required which are difficult to form accurately. In [12], a combination of vias and planar etching is used to design elliptic filters. Here, we use a discontinuity for a SIFW which is defined by planar etching alone and thus can be formed to very high precision. Fig. 4 shows a SIFW filter design with an array of shorting elements of width $d$. The shorting elements are equivalent to a post in the centre of a RWG. We find that as with a post the equivalent circuit of the discontinuity is a T-network with shunt inductor and series capacitors. The shunt inductor can be set to the
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{4.png}
+\caption{Substrate integrated folded waveguide filter.}
+\label{fig_4}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{5.png}
+\caption{Shielded stripline to SIFW transition.}
+\label{fig_5}
+\end{figure}
+desired value by changing the length $d$ of the shorting element. In this implementation we use a two layered substrate with vias to form the waveguide sidewalls. However photoimaged trenches in thick-film materials could also be used.
+\section{Measured Results}
+By calculating the equivalent circuit of the discontinuity for a range of values of $d$ using the finite element method, direct coupled cavity filters can be designed using the well-known methodology [13]. In this letter, we present a {5\%} bandwidth fourth-order 10-GHz Chebychev filter. The filter was fabricated using printed circuit board (PCB) techniques with soldered wire vias for the sidewalls. To enable measurement, a tapered transition to stripline has been developed (see Fig. 5). This differs from that of [5] in that the stripline is shielded to eliminate radiation loss. The stripline width is 2.5 mm for a 50-$\Omega$ operation. The taper length is 5.2 mm. The filter was fabricated using two layers of substrate both of thickness $b$ = 1.515 mm, $\epsilon_{r}$ = 2.2 and $\delta = 0.0009$. The width of the guide is $a$ = 7.75 mm and the gap width is $w$ = 0.9 mm. This corresponds to an X-band waveguide. The lengths of the discontinuities are $d_1$ = $d_5$ = 1.087 mm, $d_2$ = $d_4$ = 6.483 mm and $d_3$ = 6.483 mm. The separation between their centers are $L_1$ = $L_4$ = 12.19 mm and $L_2$ = $L_3$ =14.96 mm.\\
+\indent The filter was measured using an Anritsu 37 392C network analyzer with coaxial calibration. Fig. 6 shows the measured and simulated result of the filter. We note that the insertion loss is approximately 3 dB in the pass band with a return loss less than 13 dB. Adapters, SMA connectors, stripline feeds and tapered transition were not deembedded from the measurement and therefore contribute to the insertion and return loss. The response is shifted to a slightly higher frequency than the design value and this is due to the fact that in design and simulation solid sidewalls were used to allow efficient computation. However, in fabrication an array of vias were used. This effect can be allowed for with more rigorous simulation or by using the approximate expressions of [14].\\
+\indent To assess the performance of the transition, back-to-back transitions were fabricated. The entire length of the structure,
+\newpage
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{6.png}
+\caption{Simulated and measured results of SIFW filter.}
+\label{fig_6}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{7.png}
+\caption{Simulated and measured results of back-to-back stripline to SIFW transition.}
+\label{fig_7}
+\end{figure}
+\noindent including the feeding striplines at both ends was 33 mm with identical dimensions for the waveguide and taper as in the filter design. Fig. 7 shows simulated and measured response for the back-to-back taper. We see that measured values are in good agreement with simulated results. The measured return loss is worse than expected due to the SMA connectors and stripline feeds. The low frequency cutoff of the mode is clearly seen at 7 GHz. The second-order mode starts to propagate at about 13 GHz.
+\section{Conclusion}
+We have presented a SIFW that can result in a width reduction of ${(9\epsilon_{r})^{-1/2}}$ over air-filled guide. Transitions to stripline were demonstrated allowing the SIFW to be easily integrated with planar transmission lines. To demonstrate the viability of the structure a SIFW filter is shown where the response is defined by photolithography on a planar layer. This can allow highly accurate fabrication using the various multilayer techniques such as microwave laminates, photoimageable thick-films, and LTCC.
+
+
+\section*{Acknowledgments}
+The authors would like to thank S. Jakes, A. Farrall, and S. Tse for their assistance in the fabrication of the SIFWs..
+
+\section{Simple References}
+Authorized licensed use limited to: Shanghai Jiaotong University. Downloaded on November 30,2023 at 05:33:04 UTC from IEEE Xplore. Restrictions apply.
+
+\begin{thebibliography}{1}
+\bibliographystyle{IEEEtran}
+
+\bibitem{ref1}
+W. Menzal and J. Kassner, ``Millimeter-wave 3-D integration techniques using LTCC and related multilayer circuits,'' in \textit{Proc. 30th European Microwave Conf.}, Paris, France, 2000, pp. 33–53.
+
+\bibitem{ref2}
+U. Hiroshi, T. Takeshi, and M. Fujii, ``Development of a 'laminated waveguide','' \textit{IEEE Trans. Microw. Theory Tech.}, vol. 46, no. 12, pp. 2438–2443, Dec. 1998.
+
+\bibitem{ref3}
+D. Deslandes and K. Wu, ``Integrated microstrip and rectangular waveguide in planar form,'' \textit{IEEE Microw. Wireless Compon. Lett.}, vol. 11, no. 2, pp. 68–70, Feb. 2001.
+
+\bibitem{ref4}
+M. S. Aftanasar, P. R. Young, I. D. Robertson, J. Minalgiene, and S. Lucyszyn, ``Photoimageable thick-film millimeter-wave metal-pipe rectangular waveguides,'' \textit{Electron. Lett.,}, vol. 37, no. 18, pp. 1122–1123, Aug. 2001.
+
+\bibitem{ref5}
+N. Grigoropoulos and P. R. Young, ``Compact folded waveguides.,'' presented at 34th European Microwave Conf. [CD-ROM]
+
+\bibitem{ref6}
+B. Sanz Izqueirdo, P. R. Young, N. Grigoropoulos, J. C. Batchelor, and R. J. Langley, ``Substrate integrated folded waveguide slot antenna,'' \textit{Proc. IEEE Int. Workshop Antenna Technology}, pp. 307–309, Mar. 2005.
+
+\bibitem{ref7}
+G. G. Mazumder and P. K. Saha, ``A novel rectangular waveguide with double T-septums,'' \textit{IEEE Trans. Microw. Theory Tech.}, vol. 33, no. 11, pp. 1235–1238, Nov. 1985.
+
+\bibitem{ref8}
+----,``Rectangular waveguide with T-shaped septa,'' \textit{IEEE Trans. Microw. Theory Tech.}, vol. 35, no. 2, pp. 201–204, Feb. 1987.
+
+\bibitem{ref9}
+G. L. Chen, T. L. Owen, and J. H. Whealton,``Theoretical study of the folded waveguide,'' \textit{IEEE Trans. Plasma Sci.}, vol. 16, no. 2, pp. 305–311, Apr. 1988.
+
+\bibitem{ref10}
+M. S. Aftanasar, P. R. Young, and I. D. Robertson,``Rectangular waveguide filters using photoimageable thick-film processing.,'' presented at 32nd Eur. Microwave Conf. [CD-ROM] 
+
+\bibitem{ref11}
+D. Deslandes and K. Wu, "Single-substrate integration technique of planar circuits and wavguide filters," \textit{IEEE Trans. Microw. Theory Tech.}, vol. 51, no. 2, pp. 593–596, Feb. 2003. 
+
+\bibitem{ref12}
+Z. C. Hao, W. Hong, X. P. Chen, J. X. Chen, K. Wu, and T. J. Cui, "Multilayered substrate integrated waveguide (MSIW) elliptic filter," \textit{IEEE Microw. Wireless Compon. Lett.}, vol. 15, no. 2, pp. 95–97, Feb. 2005.
+
+\bibitem{ref13}
+R. E. Collin, \textit{Foundations for Microwave Engineering}. New York: McGraw-Hill, 1966. 
+
+\bibitem{ref14}
+Y. Cassivi, L. Perregrini, P. Arioni, M. Bressan, K. Wu, and G. Conciauro, "Dispersion characteristics of substrate integrated rectangular waveguide," \textit{IEEE Microw. Wireless Compon. Lett.}, vol. 12, no. 9, pp. 333–335, Sep. 2002.
+\end{thebibliography}
+\newpage
+
+
+
+\vfill
+
+\end{document}
+
+
